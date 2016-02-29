@@ -51,7 +51,7 @@ module ActiveDecorator
   end
 
   module RelationDecorator
-    def to_a
+    def records
       super.tap do |arr|
         ActiveDecorator::Decorator.instance.decorate arr
       end
